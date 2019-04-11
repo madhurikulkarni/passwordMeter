@@ -1,0 +1,39 @@
+.formbody {
+  padding-top: 2px;
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  input[type=number],
+  input[type=search],
+  textarea {
+    width: 100%;
+    background: white;
+    border: transparent;
+    text-align: left;
+    padding: 14px 11px;
+    margin-bottom: 20px;
+    background-clip: padding-box;
+    font-weight: 400;
+    color: $color-form-text;
+    border: 1px solid transparent;
+    border-radius: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: $color-form-background;
+    margin-top:10px;
+    &.error {
+      border: 1px solid $color-form-error;
+      box-shadow: 0 0 1px $color-form-error;
+    }
+
+    &:focus {
+      -webkit-box-shadow: 0 0 1px $color-form-focus;
+      box-shadow: 0 0 1px $color-form-focus;
+      border: 1px solid $color-form-focus;
+    }
+    outline: $color-form-focus;
+  }
+  p.error {
+    color: $color-form-error;
+  }
+}

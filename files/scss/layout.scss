@@ -1,0 +1,59 @@
+/* colors */
+
+$color-main: #3A3A39;
+$color-accent: #006E9C;
+$color-accent2: #18202D;
+$color-accent3: #BD920A;
+
+$color-link: $color-accent3;
+$color-link-hover: #004699;
+
+$color-text: $color-main;
+$color-heading: $color-accent;
+$color-cta: $color-accent2;
+$color-inactive: #A2A2A2;
+$color-main-btn: $color-accent3;
+
+/* forms & co */
+$color-form-text: $color-text;
+$color-form-background: #F6F6F6;
+$color-form-error: #cc0000;
+$color-form-focus: #3A3A39;
+$color-form-placeholder: #A9A9A9;
+
+/* colors end */
+
+@import "mixins";
+@import "forms";
+
+/* text definitions  */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size:16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.invisible{
+  display:none;
+}
+
+//Message Box //
+
+.message{
+  background: $color-form-background;
+  padding: 20px;
+  p{
+    &:before{
+      content:url("../images/icons/close.svg");
+      width: 12px;
+      margin-right: 12px;
+      display: inline-block;
+    }
+  }
+}

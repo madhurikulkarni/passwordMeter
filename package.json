@@ -1,0 +1,21 @@
+{
+  "name": "passwordMeter",
+  "version": "1.0.0",
+  "description": "Check the correctness of the password based on the pre-requisite conditions",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch ./files/scss/layout.scss ./files/css/main.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhurikulkarni/passwordMeter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhurikulkarni/passwordMeter/issues"
+  },
+  "homepage": "https://github.com/madhurikulkarni/passwordMeter#readme"
+}
