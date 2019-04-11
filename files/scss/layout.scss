@@ -38,22 +38,42 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
-
-.invisible{
-  display:none;
+h1{
+  color: $color-accent;
+  &:after{
+    content: ' ';
+    display: block;
+    border-bottom: 1px solid $color-accent;
+    width: 50px;
+    margin: 20px auto 30px;
+  }
 }
-
+.centered{
+  text-align: center;
+}
+.mod_article{
+  border:2px solid #000;
+  padding:20px;
+}
 //Message Box //
 
 .message{
   background: $color-form-background;
   padding: 20px;
+  margin-bottom:40px;
   p{
     &:before{
       content:url("../images/icons/close.svg");
       width: 12px;
       margin-right: 12px;
       display: inline-block;
+    }
+    &.valid{
+      &:before{
+        content:url("../images/icons/icons8-checkmark.svg");
+        margin-right: 12px;
+        display: inline-block;
+      }
     }
   }
 }
