@@ -2,17 +2,8 @@
 
 $color-main: #3A3A39;
 $color-accent: #006E9C;
-$color-accent2: #18202D;
-$color-accent3: #BD920A;
-
-$color-link: $color-accent3;
-$color-link-hover: #004699;
 
 $color-text: $color-main;
-$color-heading: $color-accent;
-$color-cta: $color-accent2;
-$color-inactive: #A2A2A2;
-$color-main-btn: $color-accent3;
 
 /* forms & co */
 $color-form-text: $color-text;
@@ -57,7 +48,7 @@ h1{
 }
 //Message Box //
 
-.message{
+#message{
   background: $color-form-background;
   padding: 20px;
   margin-bottom:40px;
@@ -75,5 +66,14 @@ h1{
         display: inline-block;
       }
     }
+  }
+}
+ul{
+  padding-left:0;
+  @include media-breakpoint-up(sm){
+    padding-left:30px;
+  }
+  li{
+    margin-bottom:15px;
   }
 }

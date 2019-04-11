@@ -4,6 +4,7 @@
   input[type=email],
   input[type=tel],
   input[type=number],
+  input[type=password],
   textarea {
     width: 100%;
     background: white;
@@ -34,5 +35,20 @@
   }
   p.error {
     color: $color-form-error;
+    margin-top:0;
   }
+  button{
+    padding: 10px 30px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    color: #fff;
+    background-color:$color-text;
+    margin-bottom:50px;
+  }
+}
+button:disabled {
+  background:$color-form-background;
+  color: $color-text;
 }
