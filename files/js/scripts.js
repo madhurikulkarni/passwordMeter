@@ -32,10 +32,10 @@ submitButton.addEventListener('click', function (event) {
 
 var pwdCheck = (str) => {
     var upper = /[A-Z]/g,
-    numbers = /[0-9]/g,
-    lower = /[a-z]/g,
-    special = /[!@#$%^&*(),.?":{}|<>]/g;
-    maxLength = 8;
+        numbers = /[0-9]/g,
+        lower = /[a-z]/g,
+        special = /[!@#$%^&*(),.?":{}|<>]/g;
+        maxLength = 8;
 
     // length//
     if(str.length >= maxLength) {
@@ -46,37 +46,33 @@ var pwdCheck = (str) => {
         length_character.classList.add("invalid");
     }
     //uppercase//
-    if(str.match(upper)){
-        uppercase.classList.remove("invalid");
-        uppercase.classList.add("valid");
-    } else {
-        uppercase.classList.remove("valid");
-        uppercase.classList.add("invalid");
-    }
+    str.match(upper) ?
+        (uppercase.classList.remove("invalid"),
+            uppercase.classList.add("valid")) :
+        (uppercase.classList.remove("valid"),
+            uppercase.classList.add("invalid"));
+
     // Numbers //
-    if(str.match(numbers)) {
-        numeric.classList.remove("invalid");
-        numeric.classList.add("valid");
-    } else {
-        numeric.classList.remove("valid");
-        numeric.classList.add("invalid");
-    }
-    // lowercase //
-    if(str.match(lower)) {
-        lowercase.classList.remove("invalid");
-        lowercase.classList.add("valid");
-    } else {
-        lowercase.classList.remove("valid");
-        lowercase.classList.add("invalid");
-    }
+    str.match(numbers) ?
+        (numeric.classList.remove("invalid"),
+            numeric.classList.add("valid")) :
+        (numeric.classList.remove("valid"),
+            numeric.classList.add("invalid"));
+
+    // Lowercase //
+    str.match(lower) ?
+        (lowercase.classList.remove("invalid"),
+            lowercase.classList.add("valid")) :
+        (lowercase.classList.remove("valid"),
+            lowercase.classList.add("invalid"));
+
     // special character //
-    if(str.match(special)) {
-        special_char.classList.remove("invalid");
-        special_char.classList.add("valid");
-    } else {
-        special_char.classList.remove("valid");
-        special_char.classList.add("invalid");
-    }
+    str.match(special) ?
+        (special_char.classList.remove("invalid"),
+            special_char.classList.add("valid")) :
+        (special_char.classList.remove("valid"),
+            special_char.classList.add("invalid"));
+
     if(str.length >= maxLength && str.match(upper) && str.match(numbers) && str.match(lower) && str.match(special)){
         return true;
     }
